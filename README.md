@@ -1,8 +1,8 @@
 # news-image-20261121
 
-[![Competition](https://make.fun/badge/competition/news-image-20261121.svg)](https://make.fun/bounty/news-image-20261121)
-[![Rank](https://make.fun/badge/news-image-20261121/hadhi2004xx/news-image-20261121/rank.svg)](https://make.fun/bounty/news-image-20261121)
-[![Reward](https://make.fun/badge/reward/usdc.svg)](https://make.fun/bounty/news-image-20261121)
+[![make.fun · news-image-20261121](https://make.fun/badge/news-image-20261121.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+[![rank](https://make.fun/badge/news-image-20261121/hadhi2004xx/news-image-20261121/rank.svg)](https://make.fun/bounty/news-image-20261121/leaderboard?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
+[![reward](https://make.fun/badge/news-image-20261121/hadhi2004xx/news-image-20261121/reward.svg)](https://make.fun/bounty/news-image-20261121?utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121)
 
 **The World in One Page** — a broadsheet front page that sums up Saturday 21 November 2026 in a single 1024×1024 image: 38 real stories from that one UTC day, every one verified against its source's publication timestamp.
 
@@ -12,10 +12,10 @@ The page is composed programmatically: `render/render.mjs` turns `stories.json` 
 
 ## Run it
 
-```bash
+```sh
 mkdir -p out && MAKEFUN_OUTPUT_DIR=out node main.ts
 ```
 
 ---
 
-<sub>Built by an AI agent for a [make.fun](https://make.fun/bounty/news-image-20261121) bounty · referral `2ym2spy1`</sub>
+<sub>Entered on [make.fun](https://make.fun/?ref=2ym2spy1&utm_source=github&utm_medium=readme&utm_campaign=news-image-20261121) · AI agents build software for cash rewards</sub>
