@@ -24,10 +24,20 @@ const esc = (t) =>
   t.replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 const hhmm = (iso) => iso.slice(11, 16);
 
+const leadArt = [
+  // Poland: missile trajectory arcing over a border line
+  `<svg viewBox="0 0 300 44" width="100%" height="44"><path d="M8 40 Q 120 -30 236 30" fill="none" stroke="#8c1d18" stroke-width="2.5"/><path d="M236 30 l-14 1 M236 30 l-4 -13" stroke="#8c1d18" stroke-width="2.5" fill="none"/><line x1="0" y1="41" x2="300" y2="41" stroke="#14120e" stroke-width="2"/><circle cx="262" cy="36" r="4" fill="#8c1d18"/></svg>`,
+  // Riyadh: air-defence arcs over a skyline
+  `<svg viewBox="0 0 300 44" width="100%" height="44"><path d="M20 40 A 90 34 0 0 1 200 40" fill="none" stroke="#8c1d18" stroke-width="2.5"/><path d="M60 40 A 55 22 0 0 1 160 40" fill="none" stroke="#14120e" stroke-width="1.5"/><rect x="216" y="22" width="10" height="18" fill="#14120e"/><rect x="234" y="14" width="10" height="26" fill="#14120e"/><rect x="252" y="26" width="10" height="14" fill="#14120e"/><line x1="0" y1="41" x2="300" y2="41" stroke="#14120e" stroke-width="2"/></svg>`,
+  // COP31: globe with meridian lines
+  `<svg viewBox="0 0 300 44" width="100%" height="44"><circle cx="150" cy="22" r="17" fill="none" stroke="#14120e" stroke-width="2"/><ellipse cx="150" cy="22" rx="7" ry="17" fill="none" stroke="#14120e" stroke-width="1.2"/><line x1="133" y1="22" x2="167" y2="22" stroke="#14120e" stroke-width="1.2"/><path d="M40 30 Q 90 6 128 18 M172 26 Q 220 40 262 14" fill="none" stroke="#8c1d18" stroke-width="2"/></svg>`,
+];
+
 const leadHtml = leads
   .map(
-    (s) => `
+    (s, i) => `
     <article class="lead">
+      <div class="art">${leadArt[i] ?? ""}</div>
       <div class="kicker">${esc(s.section)}</div>
       <h2>${esc(s.display)}</h2>
       <p class="deck">${esc(s.deck ?? "")}</p>
@@ -40,9 +50,8 @@ const tileHtml = grid
   .map(
     (s) => `
     <article class="tile">
-      <div class="kicker">${esc(s.section)}</div>
+      <div class="tilemeta"><span class="kicker">${esc(s.section)}</span><span class="tag">${esc(s.source)} · ${hhmm(s.published_utc)}</span></div>
       <h3>${esc(s.display)}</h3>
-      <div class="tag">${esc(s.source)} · ${hhmm(s.published_utc)} UTC</div>
     </article>`
   )
   .join("");
@@ -54,34 +63,37 @@ const html = `<!DOCTYPE html>
     width: 1024px; height: 1024px; overflow: hidden;
     background: #faf8f4; color: #14120e;
     font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
-    padding: 26px 30px 18px;
+    padding: 22px 30px 14px;
   }
-  .masthead { text-align: center; border-bottom: 4px double #14120e; padding-bottom: 10px; }
-  .masthead h1 { font-size: 58px; letter-spacing: 1px; font-weight: 900; }
+  .masthead { text-align: center; border-bottom: 4px double #14120e; padding-bottom: 8px; }
+  .masthead h1 { font-size: 52px; letter-spacing: 1px; font-weight: 900; }
   .dateline {
-    font-family: "DejaVu Sans Mono", monospace; font-size: 13px;
-    letter-spacing: 3px; margin-top: 4px;
+    font-family: "DejaVu Sans Mono", monospace; font-size: 12.5px;
+    letter-spacing: 3px; margin-top: 3px;
   }
-  .leads { display: flex; gap: 22px; padding: 16px 0 12px; border-bottom: 2px solid #14120e; }
+  .leads { display: flex; gap: 20px; padding: 12px 0 10px; border-bottom: 2px solid #14120e; }
   .lead { flex: 1; }
-  .lead + .lead { border-left: 1px solid #b9b2a4; padding-left: 22px; }
+  .lead + .lead { border-left: 1px solid #b9b2a4; padding-left: 20px; }
+  .lead .art { margin-bottom: 4px; }
   .kicker {
     font-family: "DejaVu Sans Mono", monospace; font-size: 10px;
-    letter-spacing: 2px; color: #8c1d18; font-weight: bold;
+    letter-spacing: 1.5px; color: #8c1d18; font-weight: bold;
   }
-  .lead h2 { font-size: 25px; line-height: 1.12; margin: 5px 0 6px; font-weight: 900; }
-  .lead .deck { font-size: 13.5px; line-height: 1.32; color: #33302a; }
+  .lead h2 { font-size: 22.5px; line-height: 1.1; margin: 4px 0 5px; font-weight: 900; }
+  .lead .deck { font-size: 12.5px; line-height: 1.3; color: #33302a; }
   .tag {
-    font-family: "DejaVu Sans Mono", monospace; font-size: 9.5px;
-    color: #6d675c; margin-top: 5px; letter-spacing: 0.5px;
+    font-family: "DejaVu Sans Mono", monospace; font-size: 9px;
+    color: #6d675c; letter-spacing: 0.3px;
   }
-  .grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 20px; margin-top: 10px; }
-  .tile { border-top: 1px solid #c9c2b2; padding: 6px 0 5px; }
-  .tile h3 { font-size: 14.5px; line-height: 1.16; font-weight: 700; margin: 2px 0 0; }
+  .lead .tag { display: block; margin-top: 4px; }
+  .grid { columns: 3; column-gap: 22px; column-rule: 1px solid #d8d2c2; margin-top: 8px; }
+  .tile { break-inside: avoid; border-top: 1px solid #c9c2b2; padding: 4px 0 4px; }
+  .tilemeta { display: flex; justify-content: space-between; align-items: baseline; }
+  .tile h3 { font-size: 13.5px; line-height: 1.13; font-weight: 700; margin-top: 1px; }
   .footer {
-    border-top: 2px solid #14120e; margin-top: 8px; padding-top: 6px;
-    font-family: "DejaVu Sans Mono", monospace; font-size: 10px;
-    letter-spacing: 1px; text-align: center; color: #4c473e;
+    border-top: 2px solid #14120e; margin-top: 6px; padding-top: 5px;
+    font-family: "DejaVu Sans Mono", monospace; font-size: 9.5px;
+    letter-spacing: 0.8px; text-align: center; color: #4c473e;
   }
 </style></head><body>
   <header class="masthead">
