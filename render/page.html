@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html><head><meta charset="utf-8"><style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body {
+    width: 1024px; height: 1024px; overflow: hidden;
+    background: #faf8f4; color: #14120e;
+    font-family: Georgia, "Times New Roman", "DejaVu Serif", serif;
+    padding: 26px 30px 18px;
+  }
+  .masthead { text-align: center; border-bottom: 4px double #14120e; padding-bottom: 10px; }
+  .masthead h1 { font-size: 58px; letter-spacing: 1px; font-weight: 900; }
+  .dateline {
+    font-family: "DejaVu Sans Mono", monospace; font-size: 13px;
+    letter-spacing: 3px; margin-top: 4px;
+  }
+  .leads { display: flex; gap: 22px; padding: 16px 0 12px; border-bottom: 2px solid #14120e; }
+  .lead { flex: 1; }
+  .lead + .lead { border-left: 1px solid #b9b2a4; padding-left: 22px; }
+  .kicker {
+    font-family: "DejaVu Sans Mono", monospace; font-size: 10px;
+    letter-spacing: 2px; color: #8c1d18; font-weight: bold;
+  }
+  .lead h2 { font-size: 25px; line-height: 1.12; margin: 5px 0 6px; font-weight: 900; }
+  .lead .deck { font-size: 13.5px; line-height: 1.32; color: #33302a; }
+  .tag {
+    font-family: "DejaVu Sans Mono", monospace; font-size: 9.5px;
+    color: #6d675c; margin-top: 5px; letter-spacing: 0.5px;
+  }
+  .grid { display: grid; grid-template-columns: repeat(3, 1fr); column-gap: 20px; margin-top: 10px; }
+  .tile { border-top: 1px solid #c9c2b2; padding: 6px 0 5px; }
+  .tile h3 { font-size: 14.5px; line-height: 1.16; font-weight: 700; margin: 2px 0 0; }
+  .footer {
+    border-top: 2px solid #14120e; margin-top: 8px; padding-top: 6px;
+    font-family: "DejaVu Sans Mono", monospace; font-size: 10px;
+    letter-spacing: 1px; text-align: center; color: #4c473e;
+  }
+</style></head><body>
+  <header class="masthead">
+    <h1>THE WORLD IN ONE PAGE</h1>
+    <div class="dateline">SATURDAY · 21 NOVEMBER 2026 · 38 STORIES · ALL TIMES UTC</div>
+  </header>
+  <section class="leads">
+    <article class="lead">
+      <div class="kicker">WAR IN EUROPE</div>
+      <h2>RUSSIAN MISSILES LAND IN POLAND — EUROPE REACTS WITH ANGER</h2>
+      <p class="deck">European leaders voice anger and alarm after Russian missiles crash on Polish soil, in the day's Ukraine war briefing.</p>
+      <div class="tag">The Guardian · 02:41 UTC</div>
+    </article>
+    <article class="lead">
+      <div class="kicker">MIDDLE EAST</div>
+      <h2>SAUDI AIR DEFENCES DOWN THREE HOOTHI MISSILES OVER RIYADH</h2>
+      <p class="deck">The Saudi-led coalition says it intercepted and destroyed three ballistic missiles fired toward the capital early Saturday — the second such attack in days.</p>
+      <div class="tag">QNA via Fana News · 08:30 UTC</div>
+    </article>
+    <article class="lead">
+      <div class="kicker">CLIMATE</div>
+      <h2>COP31 TALKS DEADLOCKED IN FIGHT OVER FOSSIL FUELS</h2>
+      <p class="deck">Negotiators at the COP31 summit are deadlocked over the future of fossil fuels as the climate talks stall.</p>
+      <div class="tag">BBC News · 09:52 UTC</div>
+    </article></section>
+  <section class="grid">
+    <article class="tile">
+      <div class="kicker">UKRAINE</div>
+      <h3>ZELENSKY: CRIMEAN BRIDGE STRIKES A 'FAIR RESPONSE'</h3>
+      <div class="tag">BBC News · 12:52 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">UKRAINE</div>
+      <h3>'A HOLE, BUT IT HASN'T COLLAPSED': KYIV CARRIES ON AFTER BRIDGE ATTACKS</h3>
+      <div class="tag">The Guardian · 05:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">RUSSIA</div>
+      <h3>DENMARK ACCUSES RUSSIA OF PLOT TO KILL US-UKRAINIAN RAPPER; ATTACHÉ EXPELLED</h3>
+      <div class="tag">BBC News · 10:26 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">IRAN WAR</div>
+      <h3>IRAN SAYS IT DOWNED A US MQ-9 DRONE OVER HORMUZ — ITS 58TH</h3>
+      <div class="tag">ABNA / Al Jazeera · 11:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">IRAQ</div>
+      <h3>FIRE AT BASRA POWER STATION KILLS AT LEAST FOUR, INJURES DOZENS</h3>
+      <div class="tag">Reuters · 06:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">GAZA</div>
+      <h3>DISPLACED GAZA FAMILIES BRACE FOR ANOTHER WINTER OF MISERY</h3>
+      <div class="tag">The Guardian · 05:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">US POLITICS</div>
+      <h3>TRUMP TURNS WHITE HOUSE BRIEFING INTO 2028 SUCCESSION AUDITION</h3>
+      <div class="tag">The Guardian · 00:16 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">US</div>
+      <h3>LARGEST CLASS OF NEW BLACK DEMOCRATS IN 30 YEARS HEADS TO CONGRESS</h3>
+      <div class="tag">Reuters · 11:55 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">CALIFORNIA</div>
+      <h3>MAN CONVICTED OF STARTING DEADLY PALISADES FIRE</h3>
+      <div class="tag">BBC News · 04:34 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">NEW YORK</div>
+      <h3>MAMDANI UNVEILS PLAN TO CLOSE RIKERS ISLAND JAIL BY 2032</h3>
+      <div class="tag">BBC News · 00:01 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">US SECURITY</div>
+      <h3>FBI PROBES APPARENT HACK OF ITS CRIMINAL DATABASE</h3>
+      <div class="tag">BBC News · 09:34 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">INVESTIGATION</div>
+      <h3>FINED $811M FOR CONNING DETAINED MIGRANTS — AND THE SCAMS WENT ON</h3>
+      <div class="tag">BBC News · 01:02 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">UK–EU</div>
+      <h3>EU DEAL NOT DEPENDENT ON TUITION FEES, MILIBAND SAYS</h3>
+      <div class="tag">BBC News · 09:40 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">WEATHER</div>
+      <h3>COLDEST AUTUMN NIGHT: FREEZE ALERTS ACROSS THE UK</h3>
+      <div class="tag">BBC Weather · 06:38 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">LONDON</div>
+      <h3>OSLO FELS TRAFALGAR SQUARE'S CHRISTMAS TREE</h3>
+      <div class="tag">BBC News · 08:10 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">ITALY</div>
+      <h3>FEWER COINS IN THE TREVI FOUNTAIN — IS THE €2 FEE TO BLAME?</h3>
+      <div class="tag">The Guardian · 05:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">UK</div>
+      <h3>GAGGING CLAUSES LIFTED AHEAD OF DATA-WATCHDOG CULTURE PROBE</h3>
+      <div class="tag">BBC News · 06:01 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">COURTS</div>
+      <h3>LETBY TRIAL DOCTOR BARRED FROM TREATING PATIENTS WAS EXPERT IN ANOTHER CASE</h3>
+      <div class="tag">The Guardian · 08:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">MEDIA</div>
+      <h3>TELEGRAPH DEPARTURES SIGNAL UNEASE UNDER AXEL SPRINGER</h3>
+      <div class="tag">The Guardian · 08:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">SOUTH AFRICA</div>
+      <h3>ANC FIGHTS TO HOLD SOUTH AFRICA'S KEY CITIES AFTER SETBACK</h3>
+      <div class="tag">BBC News · 00:34 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">NIGERIA</div>
+      <h3>BAYELSA BOAT DISASTER: SEARCH GOES ON, HUNDREDS FEARED MISSING</h3>
+      <div class="tag">Chronicle NG · 06:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">MYANMAR</div>
+      <h3>'WHEN YOU SEE SMOKE, RUN': ROHINGYA SURVIVORS TELL THEIR STORIES</h3>
+      <div class="tag">The Guardian · 04:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">SPACE</div>
+      <h3>BEPICOLOMBO REACHES MERCURY TODAY AFTER EIGHT-YEAR ODYSSEY</h3>
+      <div class="tag">Sky &amp; Telescope · 01:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">GAMING</div>
+      <h3>GTA VI SALES HIT $3.8BN ON FIRST DAY, DEVELOPER SAYS</h3>
+      <div class="tag">The Guardian · 03:51 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">AI</div>
+      <h3>UN TALKS ON AI 'KILLER ROBOTS' END WITH MORE TALKS, NO BAN</h3>
+      <div class="tag">NPR · 11:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">AI</div>
+      <h3>THE AI BOOM'S BAD WEEK RAISES LOUD ALARMS</h3>
+      <div class="tag">NPR · 11:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">SHOPPING</div>
+      <h3>CAN AI SPOT A BLACK FRIDAY BARGAIN? FOUR MODELS TESTED</h3>
+      <div class="tag">BBC News · 00:06 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">FORMULA 1</div>
+      <h3>RUSSELL–VERSTAPPEN FEUD FLARES AGAIN BEFORE LAS VEGAS START</h3>
+      <div class="tag">BBC Sport · 08:13 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">CRICKET</div>
+      <h3>CHAUDHARY'S AUSTRALIA DOWN ENGLAND IN TETCHY FIRST T20</h3>
+      <div class="tag">BBC Sport · 12:24 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">CRICKET</div>
+      <h3>LEHMANN AGAIN DENIES KNOWING OF SANDPAPER PLOT</h3>
+      <div class="tag">BBC Sport · 11:36 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">ROYALS</div>
+      <h3>CATHERINE SPEAKS OPENLY ABOUT HOW CANCER CHANGED HER</h3>
+      <div class="tag">BBC News · 12:00 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">MUSIC</div>
+      <h3>PHOEBE BRIDGERS BANS PHONES — FANS ANSWER WITH ART</h3>
+      <div class="tag">BBC News · 00:08 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">FILM</div>
+      <h3>WHO WILL BE PATTINSON'S 'BOND GIRL'? THE ROLE DEBATE</h3>
+      <div class="tag">BBC News · 00:03 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">SAFETY</div>
+      <h3>NEXT HALTS BABY SLEEPING-BAG SALES OVER SAFETY ALARM</h3>
+      <div class="tag">BBC News · 00:02 UTC</div>
+    </article>
+    <article class="tile">
+      <div class="kicker">ENGLAND</div>
+      <h3>'NATIONAL SCANDAL': ENGLAND RESIDENTS RALLY AGAINST MEGA-WAREHOUSES</h3>
+      <div class="tag">The Guardian · 11:00 UTC</div>
+    </article></section>
+  <footer class="footer">SOURCES: BBC · REUTERS · THE GUARDIAN · NPR · QNA · SKY &amp; TELESCOPE · ABNA · CHRONICLE NG — FULL CITATIONS IN STORIES.JSON</footer>
+</body></html>
