@@ -27,8 +27,8 @@ const hhmm = (iso) => iso.slice(11, 16);
 const leadArt = [
   // Poland: missile trajectory arcing over a border line
   `<svg viewBox="0 0 300 44" width="100%" height="44"><path d="M8 40 Q 120 -30 236 30" fill="none" stroke="#8c1d18" stroke-width="2.5"/><path d="M236 30 l-14 1 M236 30 l-4 -13" stroke="#8c1d18" stroke-width="2.5" fill="none"/><line x1="0" y1="41" x2="300" y2="41" stroke="#14120e" stroke-width="2"/><circle cx="262" cy="36" r="4" fill="#8c1d18"/></svg>`,
-  // Riyadh: air-defence arcs over a skyline
-  `<svg viewBox="0 0 300 44" width="100%" height="44"><path d="M20 40 A 90 34 0 0 1 200 40" fill="none" stroke="#8c1d18" stroke-width="2.5"/><path d="M60 40 A 55 22 0 0 1 160 40" fill="none" stroke="#14120e" stroke-width="1.5"/><rect x="216" y="22" width="10" height="18" fill="#14120e"/><rect x="234" y="14" width="10" height="26" fill="#14120e"/><rect x="252" y="26" width="10" height="14" fill="#14120e"/><line x1="0" y1="41" x2="300" y2="41" stroke="#14120e" stroke-width="2"/></svg>`,
+  // Riyadh: defence dome over a skyline, interception burst
+  `<svg viewBox="0 0 300 44" width="100%" height="44"><path d="M30 38 A 105 32 0 0 1 240 38" fill="none" stroke="#8c1d18" stroke-width="2.5"/><path d="M205 12 l3 7 7 1 -5 5 1 7 -6 -3 -6 3 1 -7 -5 -5 7 -1 z" fill="#8c1d18"/><rect x="96" y="26" width="12" height="12" fill="#14120e"/><rect x="116" y="18" width="12" height="20" fill="#14120e"/><rect x="136" y="28" width="12" height="10" fill="#14120e"/><rect x="156" y="22" width="10" height="16" fill="#14120e"/><line x1="0" y1="39" x2="300" y2="39" stroke="#14120e" stroke-width="2"/></svg>`,
   // COP31: globe with meridian lines
   `<svg viewBox="0 0 300 44" width="100%" height="44"><circle cx="150" cy="22" r="17" fill="none" stroke="#14120e" stroke-width="2"/><ellipse cx="150" cy="22" rx="7" ry="17" fill="none" stroke="#14120e" stroke-width="1.2"/><line x1="133" y1="22" x2="167" y2="22" stroke="#14120e" stroke-width="1.2"/><path d="M40 30 Q 90 6 128 18 M172 26 Q 220 40 262 14" fill="none" stroke="#8c1d18" stroke-width="2"/></svg>`,
 ];
@@ -80,16 +80,16 @@ const html = `<!DOCTYPE html>
     letter-spacing: 1.5px; color: #8c1d18; font-weight: bold;
   }
   .lead h2 { font-size: 22.5px; line-height: 1.1; margin: 4px 0 5px; font-weight: 900; }
-  .lead .deck { font-size: 12.5px; line-height: 1.3; color: #33302a; }
+  .lead .deck { font-size: 12.5px; line-height: 1.3; color: #26231d; }
   .tag {
     font-family: "DejaVu Sans Mono", monospace; font-size: 9px;
     color: #6d675c; letter-spacing: 0.3px;
   }
   .lead .tag { display: block; margin-top: 4px; }
   .grid { columns: 3; column-gap: 22px; column-rule: 1px solid #d8d2c2; margin-top: 8px; }
-  .tile { break-inside: avoid; border-top: 1px solid #c9c2b2; padding: 4px 0 4px; }
+  .tile { break-inside: avoid; border-top: 1px solid #c9c2b2; padding: 5px 0 4px; }
   .tilemeta { display: flex; justify-content: space-between; align-items: baseline; }
-  .tile h3 { font-size: 13.5px; line-height: 1.13; font-weight: 700; margin-top: 1px; }
+  .tile h3 { font-size: 14px; line-height: 1.14; font-weight: 700; margin-top: 1px; }
   .footer {
     border-top: 2px solid #14120e; margin-top: 6px; padding-top: 5px;
     font-family: "DejaVu Sans Mono", monospace; font-size: 9.5px;
